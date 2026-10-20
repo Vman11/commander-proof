@@ -47,6 +47,12 @@ identical.
   with the formula on **every** permutation, exactly. Also reproduces the
   published $n = 52$ Bayer–Diaconis TV table as a control.
 - `results/` — exact TV tables for $n = 100$ and $n = 99$.
+- `lean/GsrVerify.lean` — **Lean 4 verification** (core only, no Mathlib):
+  the formula checked against brute force on every permutation of small
+  decks, against an independent enumeration of the physical process, and
+  the exact $n = 100$ TV values pinned into 0.001-wide rational intervals
+  for $k = 7 \dots 12$. See `lean/README.md` for exactly what is and
+  isn't claimed.
 
 ## Run it
 
@@ -54,6 +60,7 @@ identical.
 python3 tests/test_gsr.py          # all checks, ~1s, no dependencies
 python3 src/gsr.py                 # exact TV table for n = 100
 python3 src/simulate_commander.py  # simulation vs. theory at n = 100
+lean lean/GsrVerify.lean           # Lean verification, ~5s (any Lean 4 toolchain)
 ```
 
 Pure Python 3 standard library; nothing to install.

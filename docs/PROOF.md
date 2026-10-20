@@ -149,7 +149,11 @@ $$
 independent of everything about $\pi$ except $r(\pi)$. Dividing by $a^n$
 (Lemma 2) completes the proof. ∎
 
-**Sanity checks** (all also verified exactly in code):
+**Sanity checks** (all also verified exactly in code — in Python in
+`tests/test_gsr.py`, and independently in Lean 4 in `lean/GsrVerify.lean`,
+which checks the formula against brute force on *every* permutation for
+$(n, a) \in \{(4,2), (6,2), (4,3), (5,3)\}$ and pins the exact $n = 100$
+total-variation values of Corollary 5 into 0.001-wide rational intervals):
 
 - Summing over $\pi$ grouped by $r$ gives $\sum_\pi Q_a(\pi) = 1$
   (checked for $n \le 7$, several $a$).
