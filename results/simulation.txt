@@ -1,0 +1,10 @@
+n = 100 (Commander deck), 300 simulated decks per k
+  k   exact E[r]  simulated E[r]
+  1         2.00            2.00
+  3         8.00            8.00
+  5        27.61           27.68
+  7        43.99           44.05
+  9        48.86           48.94
+ 11        50.09           50.13
+
+Uniform-random benchmark: E[r] = (n + 1) / 2 = 50.50
